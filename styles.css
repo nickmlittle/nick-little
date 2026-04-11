@@ -28,8 +28,15 @@ h1 {
   letter-spacing: -0.03em;
 }
 
-.github-link {
+.social-links {
   margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -41,12 +48,12 @@ h1 {
   transition: all 0.2s ease;
 }
 
-.github-link:hover {
+.social-link:hover {
   border-color: rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.04);
 }
 
-.github-link svg {
+.social-link svg {
   width: 20px;
   height: 20px;
 }
