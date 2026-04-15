@@ -44,6 +44,36 @@ body {
   gap: 2rem;
 }
 
+h1,
+.links a {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: content-reveal 650ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+h1 {
+  animation-delay: 0ms;
+}
+
+.links a:nth-child(1) {
+  animation-delay: 120ms;
+}
+
+.links a:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.links a:nth-child(3) {
+  animation-delay: 280ms;
+}
+
+@keyframes content-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 h1 {
   margin: 0;
   font-family: "Geist", "Inter", sans-serif;
@@ -99,5 +129,14 @@ h1 {
 
   .links {
     gap: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1,
+  .links a {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }
