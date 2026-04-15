@@ -48,25 +48,29 @@ h2,
 .links a {
   opacity: 0;
   transform: translateY(6px);
-  animation: content-reveal 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
   will-change: opacity, transform;
 }
 
 h1,
 h2 {
+  animation: content-reveal 2000ms cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-delay: 0ms;
 }
 
+.links a {
+  animation: content-reveal 3000ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .links a:nth-child(1) {
-  animation-delay: 120ms;
+  animation-delay: 520ms;
 }
 
 .links a:nth-child(2) {
-  animation-delay: 200ms;
+  animation-delay: 660ms;
 }
 
 .links a:nth-child(3) {
-  animation-delay: 280ms;
+  animation-delay: 800ms;
 }
 
 @keyframes content-reveal {
