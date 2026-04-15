@@ -29,16 +29,15 @@ body {
 .page {
   min-height: 100vh;
   padding: clamp(28px, 4vw, 48px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .content {
-  flex: 1;
+  grid-row: 1 / span 2;
+  align-self: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   max-width: 32rem;
   gap: 2rem;
@@ -118,7 +117,6 @@ h1 {
   }
 
   .content {
-    justify-content: center;
     gap: 1.5rem;
   }
 
