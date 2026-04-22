@@ -12,8 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function() {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
 </head>
 <body>
+  <button class="theme-toggle" aria-label="Toggle dark mode"></button>
   <main class="page">
     <div class="content">
       <h1>Nick Little</h1>
@@ -25,5 +33,12 @@
       </nav>
     </div>
   </main>
+  <script>
+    var btn = document.querySelector('.theme-toggle');
+    btn.addEventListener('click', function() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
